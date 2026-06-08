@@ -1,0 +1,60 @@
+# 🚀 COMECE AQUI
+
+## ✅ Seu Projeto está PRONTO!
+
+Você tem 4 arquivos:
+
+### 1. **README.md**
+Descrição do projeto (não precisa ler agora)
+
+### 2. **GUIA-PRATICO.md**
+Tudo que vocês precisam saber sobre Git/GitHub
+
+### 3. **SETUP-PORTELA.txt** ← VOCÊ LÊ AGORA
+Instruções para você configurar tudo
+
+### 4. **SETUP-MATHEUS.txt** e **SETUP-DIOGO.txt**
+Mande para seus colegas depois
+
+---
+
+## 🎯 PRÓXIMOS PASSOS (SÓ 4 PASSOS!)
+
+### 1. Crie Repositório no GitHub
+- Acesse: https://github.com/new
+- Nome: `Eletro-lab`
+- Clique Create
+
+### 2. Conecte seu Computador
+Abra PowerShell e execute:
+```
+git remote add origin https://github.com/Portel44/Eletro-lab.git
+```
+
+### 3. Envie Tudo para GitHub
+Execute 6 comandos `git push` (está no **SETUP-PORTELA.txt**)
+
+### 4. Adicione Matheus e Diogo
+Vá para: Settings → Collaborators → Add people
+
+---
+
+## 📱 Instruções Detalhadas
+
+Abra o arquivo: **SETUP-PORTELA.txt**
+
+Copie e cole cada comando, um por um.
+
+Pronto! 🎉
+
+---
+
+## 📤 Depois, compartilhe com seus colegas:
+
+**Para Matheus:** Envie o arquivo **SETUP-MATHEUS.txt**
+
+**Para Diogo:** Envie o arquivo **SETUP-DIOGO.txt**
+
+---
+
+**Precisa de ajuda?** Leia **GUIA-PRATICO.md**

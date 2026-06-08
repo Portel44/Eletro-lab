@@ -1,0 +1,121 @@
+# PORTELA - Seu Setup (VOCÊ FAZ AGORA)
+
+## 🎯 PASSO 1: Criar Repositório no GitHub
+
+### Como fazer:
+
+1. Abra: **https://github.com/new**
+
+2. Preencha assim:
+   - **Repository name:** `Eletro-lab` (exatamente assim!)
+   - **Description:** Projeto colaborativo
+   - **Public** ✅
+
+3. NÃO marque nada!
+
+4. Clique **"Create repository"**
+
+---
+
+## 🎯 PASSO 2: Conectar seu Computador ao GitHub
+
+Abra **PowerShell** na pasta do projeto e copie EXATAMENTE:
+
+```
+cd "C:\Users\User\Desktop\Eletro Lab"
+```
+
+Aperte **Enter**
+
+Depois:
+
+```
+git remote add origin https://github.com/Portel44/Eletro-lab.git
+```
+
+Aperte **Enter**
+
+---
+
+## 🎯 PASSO 3: Enviar Tudo para GitHub
+
+Agora copie UM POR UM:
+
+```
+git push -u origin master
+```
+
+**Se pedir username/senha do GitHub, coloque suas credenciais**
+
+Depois:
+
+```
+git push -u origin develop
+```
+
+Depois:
+
+```
+git push -u origin staging
+```
+
+Depois:
+
+```
+git push -u origin user/portela
+```
+
+Depois:
+
+```
+git push -u origin user/matheus
+```
+
+Depois:
+
+```
+git push -u origin user/diogo
+```
+
+**Aguarde cada um terminar!**
+
+---
+
+## 🎯 PASSO 4: Adicionar Matheus e Diogo
+
+1. Vá para: https://github.com/Portel44/Eletro-lab
+2. Clique em **Settings** (no topo, à direita)
+3. Clique em **Collaborators** (à esquerda)
+4. Clique em **Add people**
+5. Escreva o **username do Matheus** no GitHub
+6. Clique nele
+7. Repita para o **Diogo**
+
+---
+
+## ✅ PRONTO!
+
+Agora avise Matheus e Diogo para abrir:
+- **SETUP-MATHEUS.txt** (para Matheus)
+- **SETUP-DIOGO.txt** (para Diogo)
+
+---
+
+## 📝 Seu Dia a Dia
+
+**Quando chegar:**
+
+```
+git checkout user/portela
+git pull origin user/portela
+```
+
+**Quando terminar de trabalhar:**
+
+```
+git add .
+git commit -m "tipo: descrição"
+git push origin user/portela
+```
+
+Pronto! Se tiver dúvida, leia **GUIA-PRATICO.md**
