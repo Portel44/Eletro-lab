@@ -1,85 +1,70 @@
 # Eletro Lab
 
-## 📋 Descrição do Projeto
-Projeto de desenvolvimento colaborativo entre três desenvolvedores utilizando Git, GitHub e VS Code.
+Projeto colaborativo simples — arquivos essenciais e instruções rápidas.
 
-## 👥 Equipe de Desenvolvimento
+Arquivos presentes neste repositório localmente:
 
-| Integrante | GitHub | Branch | Função |
-|-----------|--------|--------|--------|
-| **Portela** | @Portel44 | `develop/portela` | - |
-| **Matheus** | - | `develop/matheus` | - |
-| **Diogo** | - | `develop/diogo` | - |
+- `README.md` — este arquivo (resumido)
+- `GUIA-PRATICO.md` — Guia prático (passo a passo para trabalhar)
+- `COMECE-AQUI.txt` — Instruções rápidas do que fazer primeiro
+- `EXECUTA-AGORA.txt` — Passos imediatos para publicar no GitHub
+- `SETUP-PORTELA.txt` — Instruções para Portela (criar repo / push)
+- `SETUP-MATHEUS.txt` — Instruções para Matheus (clone / checkout)
+- `SETUP-DIOGO.txt` — Instruções para Diogo (clone / checkout)
+- `script.js` — arquivo do projeto
+- `.gitignore` — arquivos que o Git ignora
 
-## 🌳 Estrutura de Branches
+Objetivo deste README: dar um resumo rápido e apontar para os arquivos que vocês vão usar.
 
+Instruções essenciais (muito simples)
+
+1) Se você é a pessoa que vai publicar o repositório no GitHub (Portela):
+
+```powershell
+cd "C:\Users\User\Desktop\Eletro Lab"
+git remote add origin https://github.com/Portel44/Eletro-lab.git
+git push -u origin master
+git push -u origin user/portela
+git push -u origin user/matheus
+git push -u origin user/diogo
 ```
-main (branch principal - produção)
-  ├── staging (pre-release)
-  └── develop (integração)
-      ├── develop/portela (desenvolvimento Portela)
-      ├── develop/matheus (desenvolvimento Matheus)
-      └── develop/diogo (desenvolvimento Diogo)
+
+2) Se você é Matheus ou Diogo — passos simples para começar:
+
+```powershell
+# Matheus
+cd C:\Users\User\Desktop
+git clone https://github.com/Portel44/Eletro-lab.git
+cd Eletro-lab
+git checkout -b user/matheus origin/user/matheus
+
+# Diogo
+cd C:\Users\User\Desktop
+git clone https://github.com/Portel44/Eletro-lab.git
+cd Eletro-lab
+git checkout -b user/diogo origin/user/diogo
 ```
 
-- **main**: Branch de produção - código estável e testado
-- **staging**: Branch para testes pré-release
-- **develop**: Branch de integração - merge de todas as features
-- **develop/[nome]**: Branches individuais para cada desenvolvedor
+3) Fluxo rápido de trabalho (diário)
 
-## ⚙️ Configuração Inicial
+```powershell
+# 1. Antes de começar
+git checkout user/[seu-nome]
+git pull origin user/[seu-nome]
 
-### Para a Equipe
+# 2. Depois de editar
+git add .
+git commit -m "tipo: descrição breve"
+git push origin user/[seu-nome]
+```
 
-1. **Clonar o repositório:**
-   ```bash
-   git clone https://github.com/Portel44/Eletro-lab.git
-   cd Eletro-lab
-   ```
+4) Criar um Pull Request (quando terminar uma feature)
 
-2. **Sincronizar branches locais:**
-   ```bash
-   git fetch origin
-   git branch -a
-   ```
+Vá para o repositório no GitHub → **Pull Requests** → **New Pull Request**
+Escolha: base = `develop`, compare = `user/[seu-nome]`, clique em **Create Pull Request**.
 
-3. **Criar/verificar sua branch pessoal:**
-   ```bash
-   # Matheus
-   git checkout -b develop/matheus origin/develop/matheus
-   
-   # Diogo
-   git checkout -b develop/diogo origin/develop/diogo
-   
-   # Portela
-   git checkout -b develop/portela origin/develop/portela
-   ```
+Se tiver problemas, abra `GUIA-PRATICO.md` para passos mais detalhados.
 
-## 🚀 Fluxo de Trabalho
+---
 
-Veja [WORKFLOW.md](./WORKFLOW.md) para instruções detalhadas sobre:
-- Como fazer commits
-- Como fazer push/pull
-- Como criar Pull Requests
-- Como sincronizar alterações
-- Como resolver conflitos
-
-## 📝 Normas de Commits
-
-- Usar mensagens descritivas em português ou inglês
-- Padrão: `tipo: descrição breve`
-- Exemplos:
-  - `feat: adicionar validação de email`
-  - `fix: corrigir bug na autenticação`
-  - `docs: atualizar README`
-  - `refactor: reorganizar estrutura de pastas`
-
-## 📞 Comunicação
-
-- Usar Issues para bugs e features
-- Usar Pull Requests para code review
-- Manter comentários nos commits quando necessário
-
-## 📄 Licença
-
-Defina conforme necessário.
+Se quiser que eu também faça o `git push` desta branch (`user/portela`) para o remoto agora, me autorize e eu executo (pode pedir autenticação).

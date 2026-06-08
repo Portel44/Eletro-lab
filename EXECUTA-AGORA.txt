@@ -1,0 +1,104 @@
+# ⚡ EXECUÇÃO AGORA
+
+## 🎯 VOCÊ ESTÁ AQUI
+
+Seu projeto está 100% pronto localmente. Agora precisa:
+
+1. ✅ Criar repo no GitHub
+2. ✅ Conectar ao GitHub
+3. ✅ Fazer push de tudo
+4. ✅ Adicionar colabs
+
+---
+
+## 📋 PASSO 1: Criar Repo no GitHub (2 minutos)
+
+1. Abra: **https://github.com/new**
+
+2. Preencha EXATAMENTE assim:
+   - **Repository name:** `Eletro-lab`
+   - **Description:** Projeto colaborativo
+   - ✅ **Public**
+   - ❌ NÃO marque "Add a README file"
+
+3. Clique **"Create repository"**
+
+✅ **FEITO!**
+
+---
+
+## 📋 PASSO 2: Conectar seu PC ao GitHub (1 minuto)
+
+Abra **PowerShell** e execute:
+
+```bash
+cd "C:\Users\User\Desktop\Eletro Lab"
+git remote add origin https://github.com/Portel44/Eletro-lab.git
+```
+
+✅ **FEITO!**
+
+---
+
+## 📋 PASSO 3: Fazer Push (5 minutos)
+
+Execute UM POR UM (aguarde cada um terminar):
+
+```bash
+git push -u origin master
+git push -u origin develop
+git push -u origin staging
+git push -u origin user/portela
+git push -u origin user/matheus
+git push -u origin user/diogo
+```
+
+**Se pedir login, use suas credenciais do GitHub**
+
+✅ **FEITO!**
+
+---
+
+## 📋 PASSO 4: Adicionar Colabs (2 minutos)
+
+1. Vá para: **https://github.com/Portel44/Eletro-lab**
+
+2. Clique em **Settings** (no topo à direita)
+
+3. Clique em **Collaborators** (à esquerda)
+
+4. Clique em **Add people**
+
+5. Digite o **username do Matheus** no GitHub → clique nele
+
+6. Repita para o **Diogo**
+
+✅ **FEITO!**
+
+---
+
+## ✅ AGORA SIM!
+
+Seu projeto está no GitHub!
+
+---
+
+## 📤 Envie Para Seus Colegas
+
+**Para Matheus:**
+- Envie o arquivo: `SETUP-MATHEUS.txt`
+- Envie o link: `https://github.com/Portel44/Eletro-lab`
+
+**Para Diogo:**
+- Envie o arquivo: `SETUP-DIOGO.txt`
+- Envie o link: `https://github.com/Portel44/Eletro-lab`
+
+---
+
+## 📖 Qualquer Dúvida?
+
+Abra: **GUIA-PRATICO.md**
+
+---
+
+**Bora! 🚀**

@@ -1,0 +1,76 @@
+# DIOGO - Seu Setup (Copie e Cole)
+
+## 🎯 O que você precisa fazer AGORA
+
+Abra o **PowerShell** ou **Terminal** e copie EXATAMENTE esses comandos, um por um:
+
+---
+
+## 1️⃣ Primeiro Comando
+
+```
+cd C:\Users\User\Desktop
+```
+
+Aperte **Enter**
+
+---
+
+## 2️⃣ Segundo Comando
+
+```
+git clone https://github.com/Portel44/Eletro-lab.git
+```
+
+Aperte **Enter** e aguarde terminar (pode demorar um pouco)
+
+---
+
+## 3️⃣ Terceiro Comando
+
+```
+cd Eletro-lab
+```
+
+Aperte **Enter**
+
+---
+
+## 4️⃣ Quarto Comando (IMPORTANTE!)
+
+```
+git checkout -b user/diogo origin/user/diogo
+```
+
+Aperte **Enter**
+
+---
+
+## ✅ PRONTO!
+
+Abra a pasta `C:\Users\User\Desktop\Eletro-lab` no VS Code.
+
+Sua branch é: **user/diogo**
+
+Agora você pode editar os arquivos!
+
+---
+
+## 📝 Dia a Dia
+
+**Quando chegar na frente do computador:**
+
+```
+git checkout user/diogo
+git pull origin user/diogo
+```
+
+**Quando terminar de trabalhar:**
+
+```
+git add .
+git commit -m "tipo: descrição"
+git push origin user/diogo
+```
+
+Pronto! Se tiver dúvida, leia **GUIA-PRATICO.md**
