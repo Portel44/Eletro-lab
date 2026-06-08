@@ -102,12 +102,12 @@ and have X and Y different commits each, respectively.
 
 ```bash
 # Opção 1: Sincronizar via merge (mais seguro)
-git pull origin develop/portela
-git push origin develop/portela
+git pull origin user/portela
+git push origin user/portela
 
 # Opção 2: Sincronizar via rebase (se você sabe o que faz)
-git pull --rebase origin develop/portela
-git push origin develop/portela
+git pull --rebase origin user/portela
+git push origin user/portela
 ```
 
 ---
@@ -177,7 +177,7 @@ git status mostra arquivo modificado mas o conteúdo é idêntico
 git checkout -- arquivo.js
 
 # Ou resetar tudo
-git reset --hard origin/develop/[seu-nome]
+git reset --hard origin/user/[seu-nome]
 ```
 
 ---
@@ -193,14 +193,14 @@ rejected: failed to push some refs to 'origin'
 
 ```bash
 # Sincronizar primeiro
-git pull origin develop/[seu-nome]
+git pull origin user/[seu-nome]
 
 # Depois tentar novamente
-git push origin develop/[seu-nome]
+git push origin user/[seu-nome]
 
 # Se ainda não funcionar:
-git pull --rebase origin develop/[seu-nome]
-git push origin develop/[seu-nome]
+git pull --rebase origin user/[seu-nome]
+git push origin user/[seu-nome]
 ```
 
 ---

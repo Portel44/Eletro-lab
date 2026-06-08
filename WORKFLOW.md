@@ -3,12 +3,12 @@
 ## 🎯 Estrutura de Branching
 
 ```
-main (produção)
- └─ staging (testes)
-     └─ develop (integração)
-         ├─ develop/portela
-         ├─ develop/matheus
-         └─ develop/diogo
+master (branch principal)
+  ├── staging (testes)
+  └── develop (integração)
+      ├── user/portela
+      ├── user/matheus
+      └── user/diogo
 ```
 
 ---
@@ -23,17 +23,17 @@ Executar **UMA VEZ** quando começar:
 # Matheus
 git clone https://github.com/Portel44/Eletro-lab.git
 cd Eletro-lab
-git checkout -b develop/matheus origin/develop/matheus
+git checkout -b user/matheus origin/user/matheus
 
 # Diogo
 git clone https://github.com/Portel44/Eletro-lab.git
 cd Eletro-lab
-git checkout -b develop/diogo origin/develop/diogo
+git checkout -b user/diogo origin/user/diogo
 
 # Portela
 git clone https://github.com/Portel44/Eletro-lab.git
 cd Eletro-lab
-git checkout -b develop/portela origin/develop/portela
+git checkout -b user/portela origin/user/portela
 ```
 
 ---
@@ -44,16 +44,16 @@ Executar a cada início de sessão:
 
 ```bash
 # Matheus
-git checkout develop/matheus
-git pull origin develop/matheus
+git checkout user/matheus
+git pull origin user/matheus
 
 # Diogo
-git checkout develop/diogo
-git pull origin develop/diogo
+git checkout user/diogo
+git pull origin user/diogo
 
 # Portela
-git checkout develop/portela
-git pull origin develop/portela
+git checkout user/portela
+git pull origin user/portela
 ```
 
 ---
@@ -99,13 +99,13 @@ git commit -m "refactor: melhorar legibilidade do código"
 
 ```bash
 # Matheus
-git push origin develop/matheus
+git push origin user/matheus
 
 # Diogo
-git push origin develop/diogo
+git push origin user/diogo
 
 # Portela
-git push origin develop/portela
+git push origin user/portela
 ```
 
 ---
@@ -118,7 +118,7 @@ Quando quiser mesclar sua branch pessoal com `develop`:
 
 1. Vá para https://github.com/Portel44/Eletro-lab
 2. Clique em "Pull Requests" → "New Pull Request"
-3. Comparar: `base: develop` ← `compare: develop/[seu-nome]`
+3. Comparar: `base: develop` ← `compare: user/[seu-nome]`
 4. Adicione título e descrição
 5. Clique "Create Pull Request"
 6. Aguarde aprovação de outro membro
@@ -130,12 +130,12 @@ Quando quiser mesclar sua branch pessoal com `develop`:
 # Matheus mergear em develop
 git checkout develop
 git pull origin develop
-git merge develop/matheus
+git merge user/matheus
 git push origin develop
 
 # Depois sincronizar sua branch
-git checkout develop/matheus
-git pull origin develop/matheus
+git checkout user/matheus
+git pull origin user/matheus
 ```
 
 ---
@@ -146,22 +146,22 @@ Após um merge ser aceito, todos devem sincronizar:
 
 ```bash
 # Matheus
-git checkout develop/matheus
-git pull origin develop/matheus
+git checkout user/matheus
+git pull origin user/matheus
 git merge origin/develop
-git push origin develop/matheus
+git push origin user/matheus
 
 # Diogo
-git checkout develop/diogo
-git pull origin develop/diogo
+git checkout user/diogo
+git pull origin user/diogo
 git merge origin/develop
-git push origin develop/diogo
+git push origin user/diogo
 
 # Portela
-git checkout develop/portela
-git pull origin develop/portela
+git checkout user/portela
+git pull origin user/portela
 git merge origin/develop
-git push origin develop/portela
+git push origin user/portela
 ```
 
 ---
@@ -170,26 +170,26 @@ git push origin develop/portela
 
 ```bash
 # 1. INÍCIO DO DIA
-git checkout develop/[seu-nome]
-git pull origin develop/[seu-nome]
+git checkout user/[seu-nome]
+git pull origin user/[seu-nome]
 
 # 2. TRABALHE NO SEU CÓDIGO
 
 # 3. FIM DO DIA
 git add .
 git commit -m "tipo: descrição do que fez"
-git push origin develop/[seu-nome]
+git push origin user/[seu-nome]
 
 # 4. SE QUISER MESCLAR
 git checkout develop
 git pull origin develop
-git merge develop/[seu-nome]
+git merge user/[seu-nome]
 git push origin develop
 
 # 5. ATUALIZE SUA BRANCH
-git checkout develop/[seu-nome]
+git checkout user/[seu-nome]
 git merge origin/develop
-git push origin develop/[seu-nome]
+git push origin user/[seu-nome]
 ```
 
 ---

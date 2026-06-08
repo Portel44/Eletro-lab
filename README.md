@@ -7,19 +7,19 @@ Projeto de desenvolvimento colaborativo entre três desenvolvedores utilizando G
 
 | Integrante | GitHub | Branch | Função |
 |-----------|--------|--------|--------|
-| **Portela** | @Portel44 | `develop/portela` | - |
-| **Matheus** | - | `develop/matheus` | - |
-| **Diogo** | - | `develop/diogo` | - |
+| **Portela** | @Portel44 | `user/portela` | - |
+| **Matheus** | - | `user/matheus` | - |
+| **Diogo** | - | `user/diogo` | - |
 
 ## 🌳 Estrutura de Branches
 
 ```
-main (branch principal - produção)
+master → main (branch principal - produção)
   ├── staging (pre-release)
   └── develop (integração)
-      ├── develop/portela (desenvolvimento Portela)
-      ├── develop/matheus (desenvolvimento Matheus)
-      └── develop/diogo (desenvolvimento Diogo)
+      ├── user/portela (desenvolvimento Portela)
+      ├── user/matheus (desenvolvimento Matheus)
+      └── user/diogo (desenvolvimento Diogo)
 ```
 
 - **main**: Branch de produção - código estável e testado
@@ -46,13 +46,13 @@ main (branch principal - produção)
 3. **Criar/verificar sua branch pessoal:**
    ```bash
    # Matheus
-   git checkout -b develop/matheus origin/develop/matheus
+   git checkout -b user/matheus origin/user/matheus
    
    # Diogo
-   git checkout -b develop/diogo origin/develop/diogo
+   git checkout -b user/diogo origin/user/diogo
    
    # Portela
-   git checkout -b develop/portela origin/develop/portela
+   git checkout -b user/portela origin/user/portela
    ```
 
 ## 🚀 Fluxo de Trabalho
