@@ -1,4 +1,4 @@
-// aqui vai ser instalado os próximos códigos com grandezas
+
 function formatarResultado(num) {
     let str = Number(num).toFixed(5);
     return str.replace(/\.?0+$/, '');
@@ -21,31 +21,38 @@ if (unidade_medida === "G") {
     fator_escala = 0.000001;
 } else if (unidade_medida === "n") {
     fator_escala = 0.000000001;
+} else if (unidade_medida === "p") {
+    fator_escala = 0.000000000001;
 }
-
 //AQUI PRA ACHAR TENSÃO E POTÊNCIA OU ATÉ MESMO DEMAIS VALORES
-let v = 220;       // DDP Volts
-let i = 32;       // CORRENTE Ampéres
-let r = null;       // RESISTÊNCIA Ohms
-let p = null;        // POTÊNCIA Watts
-
+ class Grandeza_Eletrica {
+    constructor(valor, unidade) {
+        this.valor = valor;
+        this.unidade = unidade;
+    }
+}
+let v = new Grandeza_Eletrica(null, "V");       // DDP Volts
+let i = new Grandeza_Eletrica(null, "A");       // CORRENTE Ampéres
+let r = new Grandeza_Eletrica(null, "Ω");       // RESISTÊNCIA Ohms
+let p = new Grandeza_Eletrica(null, "W");        // POTÊNCIA Watts
+let c = new Grandeza_Eletrica(null, "F");       // CAPACITÂNCIA Farads
 
 // AQUI PRA ACHAR CORRENTE
 
-let q = null;     // CARGA EM COULOMBS  
-let t = null;      // TEMPO EM SEGUNDOS 
+let q = new Grandeza_Eletrica(null, "C");     // CARGA EM COULOMBS  
+let t_corrente = new Grandeza_Eletrica(5, "s");      // TEMPO EM SEGUNDOS 
 
 
 // AQUI PRA ACHAR RESISTENCIA
-let rho = null;     //  RESISTIVIDADE DO MATERIAL
-let compl = null;      //  COMPRIMENTO EM METROS
-let area = null;       //  AREA DA SECÇAÕ TRANSVERSAL
+let rho = new Grandeza_Eletrica(2.65e-8, "Ω·m");     //  RESISTIVIDADE DO MATERIAL
+let compl = new Grandeza_Eletrica(5000, "m");      //  COMPRIMENTO EM METROS
+let area = new Grandeza_Eletrica(0.5, "mm²");       //  AREA DA SECÇAÕ TRANSVERSAL
 
-// Para achar KWh
-let horas_totais = 24;       // Horas
-let consumo_energia = null;    // Kilo Watts Horas
+// Para achar Energia em KWh
+let t_energia = new Grandeza_Eletrica(24, "h");       // Tempo em Horas
+let consumo_energia = new Grandeza_Eletrica(null, "kWh");    // Energia em Kilo Watts Horas
 
-let delta_segundos = null;
+let delta_segundos = new Grandeza_Eletrica(null, "s"); // Delta tempo em segundos para achar potência pela energia
 
 
 if (v !== null) v = v * fator_escala;
@@ -59,17 +66,17 @@ let houveMudanca = true;
 while (houveMudanca) {
     houveMudanca = false;
 
-    if (i === null && q !== null && t !== null && t !== 0) {
-        i = q / t;
-        console.log("Sua corrente (q/t) é igual a (i): " + formatarResultado(i / fator_escala) + " " + unidade_medida + "Amperes");
+    if (i === null && q !== null && t_corrente !== null && t_corrente !== 0) {
+        i = q / t_corrente;
+        console.log("Sua corrente (q/t_corrente) é igual a (i): " + formatarResultado(i / fator_escala) + " " + unidade_medida + "Amperes");
         houveMudanca = true;
-    } else if (q === null && i !== null && t !== null) {
-        q = i * t;
+    } else if (q === null && i !== null && t_corrente !== null) {
+        q = i * t_corrente;
         console.log("Sua carga é igual a (C): " + formatarResultado(q) + " Coulombs");
         houveMudanca = true;
-    } else if (t === null && q !== null && i !== null && i !== 0) {
-        t = q / i;
-        console.log("Seu tempo é igual a (t): " + formatarResultado(t) + " Segundos");
+    } else if (t_corrente === null && q !== null && i !== null && i !== 0) {
+        t_corrente = q / i;
+        console.log("Seu tempo é igual a (t): " + formatarResultado(t_corrente) + " Segundos");
         houveMudanca = true;
     }
 
@@ -149,17 +156,17 @@ while (houveMudanca) {
             houveMudanca = true;
         }
     }
-    if (consumo_energia === null && horas_totais !==null && p !==null){
-            consumo_energia = (p * horas_totais) / 1000;
-            console.log("Seu consumo de energia total calculado pela potência é igual a (KWh):" + formatarResultado(consumo_energia) + "KWh");
+    if (consumo_energia === null && t_energia !==null && p !==null){
+            consumo_energia = (p * t_energia) / 1000;
+            console.log("Seu consumo de energia (p*t_energia) é igual a (KWh):" + formatarResultado(consumo_energia) + "KWh");
             houveMudanca = true;
-    } else if (horas_totais === null && consumo_energia !==null && p !==null ){
-            horas_totais = (consumo_energia * 1000) / p;
-            console.log("Suas horas totais calculadas pelo consumo são de (h)" + formatarResultado(horas_totais) + "Horas");
+    } else if (t_energia === null && consumo_energia !==null && p !==null ){
+            t_energia = (consumo_energia * 1000) / p;
+            console.log("Seu tempo de consumo (E/P) são de (h)" + formatarResultado(t_energia) + "Horas");
             houveMudanca = true;
-    } else if (p === null && consumo_energia !==null && horas_totais !==null){
-            p = (consumo_energia * 1000) / horas_totais; 
-            console.log("Sua potência calculada pelo consumo de energia é de (W)" + formatarResultado(p / fator_escala) + " " + unidade_medida + "Watts")
+    } else if (p === null && consumo_energia !==null && t_energia !==null){
+            p = (consumo_energia * 1000) / t_energia; 
+            console.log("Sua potência (E/t_energia) é de (W)" + formatarResultado(p / fator_escala) + " " + unidade_medida + "Watts")
             houveMudanca = true;
 
     }
